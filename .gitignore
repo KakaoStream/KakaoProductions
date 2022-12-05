@@ -1,19 +1,16 @@
 # build output
-dist/
+**/dist
+**/*.db
+**/uploads
+**/database
 
 # dependencies
-node_modules/
-
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
+**/node_modules/
 
 # environment variables
-.env
-.env.production
+**/.env
+**/.env.production
+**/inventory.yml
 
-# macOS-specific files
-.DS_Store
+# operating system
+**/.DS_Store

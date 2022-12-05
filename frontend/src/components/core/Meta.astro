@@ -1,0 +1,37 @@
+---
+import { SEO } from "astro-seo";
+import { SITE } from "../../config";
+import Fonts from "./Fonts.astro";
+
+export interface Props {
+  title?: string;
+  description?: string;
+  noindex?: boolean;
+  nofolow?: boolean;
+}
+
+const {
+  title = SITE.title,
+  description = SITE.description,
+  noindex = false,
+  nofollow = false,
+} = Astro.props;
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<SEO
+  title={title}
+  description={description}
+  noindex={noindex}
+  nofollow={nofollow}
+  twitter={{
+    card: "summary_large_image",
+  }}
+  extend={{
+    link: [{ rel: "shortcut icon", href: "/favicon.ico" }],
+  }}
+/>
+
+<Fonts />
