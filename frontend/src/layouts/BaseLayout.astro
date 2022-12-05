@@ -1,0 +1,41 @@
+---
+import "../assets/styles/global.css";
+
+import Header from "../components/Header.astro";
+import { SITE } from "../config";
+import Meta, { Props as MetaProps } from "../components/core/Meta.astro";
+
+export interface Props {
+  meta?: MetaProps;
+  title?: string;
+  page?: string;
+}
+
+const { page, meta } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang={SITE.language}>
+  <head>
+    <Meta {...meta} />
+    <style>
+      body {
+        height: 100vh;
+        background: linear-gradient(to top, #ffddb5, #fff0de);
+        display: flex;
+        justify-content: center;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 80rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <Header page={page} />
+      <slot />
+    </div>
+  </body>
+</html>
