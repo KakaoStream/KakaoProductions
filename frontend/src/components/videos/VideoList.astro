@@ -1,0 +1,16 @@
+---
+import portfolio from "../../assets/portfolio.json";
+import Video from "./Video.astro";
+---
+
+<ul class="video-list">
+  {portfolio.map((video) => <Video id={video.id} title={video.title} />)}
+</ul>
+
+<style>
+  .video-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+</style>
