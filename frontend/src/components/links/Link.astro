@@ -1,0 +1,85 @@
+---
+import banner from "../../assets/images/banner_kurz.png";
+import youtube from "../../assets/images/YouTube.png";
+import twitch from "../../assets/images/Twitch.png";
+import tiktok from "../../assets/images/TikTok.png";
+
+interface Props {
+  media: string;
+  name: string;
+  url: string;
+  follower: number;
+  logo: string;
+}
+
+const { media, name, url, follower, color } = Astro.props;
+---
+
+<a href={`${url}`} class="panel" target="_blank">
+  <div class="container">
+    <div class="head">
+      {media === "YouTube" && <img src={`${youtube}`} class="logo" />}
+      {media === "Twitch" && <img src={`${twitch}`} class="logo" />}
+      {media === "TikTok" && <img src={`${tiktok}`} class="logo" />}
+      <img src={`${banner}`} class="banner" />
+    </div>
+    <h3 class="name">{name}</h3>
+    <p class="description">Follower: {follower}</p>
+  </div>
+</a>
+
+<style define:vars={{ color }}>
+  .container {
+    width: 350px;
+    margin: 10px;
+    padding: 0px 0px 10px 0px;
+    text-align: center;
+    border-radius: 7px;
+    background-color: var(--color);
+    filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.2));
+  }
+
+  .container:hover {
+    scale: 1.1;
+    transition: scale 0.3s ease-in-out;
+  }
+
+  .container:hover .banner {
+    opacity: 100%;
+    filter: blur(0);
+    transition: scale 0.5s ease-in-out;
+  }
+
+  .head {
+    position: relative;
+    border-radius: 7px;
+    overflow: hidden;
+  }
+
+  .logo {
+    width: 50px;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0 0 0.3rem black);
+  }
+
+  .banner {
+    width: 100%;
+    object-fit: cover;
+    opacity: 60%;
+    filter: blur(2px);
+  }
+
+  .name {
+    margin: 0.5em;
+    color: white;
+  }
+
+  .description {
+    margin: 1em;
+    color: white;
+  }
+</style>

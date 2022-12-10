@@ -1,0 +1,26 @@
+---
+import socialmedia from "../../assets/socialmedia.json";
+import Link from "./Link.astro";
+---
+
+<ul class="media-list">
+  {
+    socialmedia.map((link) => (
+      <Link
+        media={link.media}
+        name={link.name}
+        url={link.url}
+        follower={link.follower}
+        color={link.color}
+      />
+    ))
+  }
+</ul>
+
+<style>
+  .media-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+</style>

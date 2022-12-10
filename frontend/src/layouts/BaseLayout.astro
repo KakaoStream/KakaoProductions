@@ -2,6 +2,7 @@
 import "../assets/styles/global.css";
 
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import { SITE } from "../config";
 import Meta, { Props as MetaProps } from "../components/core/Meta.astro";
 
@@ -36,6 +37,7 @@ const { page, meta } = Astro.props;
     <div class="container">
       <Header page={page} />
       <slot />
+      <Footer />
     </div>
   </body>
 </html>

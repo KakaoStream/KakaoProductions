@@ -1,10 +1,19 @@
 ---
 import VideoList from "../components/videos/VideoList.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import BestList from "../components/videos/BestList.astro";
 ---
 
 <BaseLayout page="home">
   <h1 class="title">Von mir editiertes Videomaterial</h1>
+
+  <h2 class="partTitle">Beliebte Videos</h2>
+
+  <div class="portfolio">
+    <BestList />
+  </div>
+
+  <h2 class="partTitle">Alle Videos</h2>
 
   <div class="portfolio">
     <VideoList />
@@ -21,6 +30,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     background-color: #dbac7e;
     border-radius: 10px;
     padding: 1em;
-    margin: 2em;
+    margin: 1em 3em 1em 3em;
+  }
+
+  .partTitle {
+    margin: 3em 2em 0 2em;
   }
 </style>

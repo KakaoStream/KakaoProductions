@@ -1,11 +1,19 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import LinkList from "../components/links/LinkList.astro";
 ---
 
 <BaseLayout title="Links" page="links">
-  <!--
-	<ul>
-		{SocialMedia.map((SocialMedia) => <li>{SocialMedia}</li>)}
-	</ul>
-	-->
+  <h1 class="title">Social Media</h1>
+
+  <div class="container">
+    <LinkList />
+  </div>
 </BaseLayout>
+
+<style>
+  .title {
+    text-align: center;
+    margin: 1em 0 2em 0;
+  }
+</style>

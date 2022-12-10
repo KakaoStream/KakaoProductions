@@ -3,37 +3,85 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Über mich" page="about">
-  <div>
-    <h2>Über mich</h2>
-    <p>
-      Ich studiere aktuell Medientechnologie an der Technischen Universität
-      Ilmenau im Bachelor und bin nebenbei als Kleinunternehmen tätig. Dieses
-      Unternehmen namens Kakao Productions habe ich anfang 2021 gegründet und
-      beschäftige mich hauptsächlich mit der Videoproduktion, erarbeite aber
-      auch Grafiken oder Webseiten wie diese. Referenzen dafür finden Sie in
-      meinem Portfolio auf der Startseite. Praktische Erfahrung sammel ich
-      außerdem während meiner Werkstudentenanstellung in der Post Produktion der
-      Werbeagentur
-      <a href="https://videobeat.net">Videobeat</a> und als Video Editor für den
-      YouTube Kanal <a href="https://www.youtube.com/@RvNxMango">RvnxMango</a>.
-      Alles weitere habe ich mir selbst beigebracht in meiner Freizeit.
+  <div class="container">
+    <h1 class="title">Informationen über mich</h1>
+
+    <h2 class="partTitle">Über mich</h2>
+
+    <p class="absatz">
+      Ich, Paul Frank, studiere aktuell Medientechnologie an der <a
+        href="https://www.tu-ilmenau.de"
+        class="highlight"
+        target="_blank">Technischen Universität Ilmenau</a
+      >. Bei diesem Studiengang handelt es sich um einen Ingenieur Studiengang
+      und beschäftigt sich somit mit allen Grundlagen des Ingenieurs. Des
+      Weiteren spezialisiert sich das Studium in höherer Laufzeit auf das Thema
+      Medientechnik und ist versehen mit weiteren Aspekten wie Medienrecht und
+      diversen geisteswissenschaftlichen Themengebieten. Daher bringe ich ein
+      solides technisches Verständnis in Grundfächern wie Elektrotechnik, Physik
+      und Mathe mit, als auch verschiedene Programmiersprachen wie Python,
+      JavaScript, C++, Assembler, XML und Pascal.
     </p>
-    <h2 class="absatz">Kontakt</h2>
+    <p class="absatz">
+      Da die Universität hauptsächlich den theoretischen Teil abdeckt, habe ich
+      mich für die Praxis selbstständig gemacht und leite mein eigenes
+      Einzelunternehmen. Dieses Unternehmen namens Kakao Productions habe ich
+      anfang 2021 gegründet. Dabei erarbeite ich Aufträge zur Erstellung,
+      Bearbeitung und Aufarbeitung von Videomaterial. Zusätzlich beschäftige ich
+      mich aber auch mit Grafiken oder Webseiten wie diese. Aktuell editiere ich
+      die Videos des Hauptkanals vom YouTuber <a
+        href="https://www.youtube.com/@RvNxMango"
+        class="highlight"
+        target="_blank">RvnxMango</a
+      >. Auf dem Gebiet bin ich vertraut mit Programmen wie Sony Vegas, arbeite
+      aber persönlich mit Adobe Premiere Pro, After Effects und Photoshop.
+      Jedoch bin ich nicht nur für die Video-Editierung zuständig, sondern
+      arbeite auch an der Konzeptionsfindung und -erarbeitung mit und leite
+      seinen TikTok Account.
+    </p>
+    <p class="absatz">
+      Weitere praktische Erfahrung sammel ich außerdem während meiner
+      Werkstudentenanstellung in der Post Produktion der Werbeagentur
+      <a href="https://videobeat.net" class="highlight" target="_blank"
+        >Videobeat</a
+      >. Hierbei unterstütze ich bei der Umsetzung von TV-Spots und
+      professionellen Videos in Premiere/ After Effects. Im Bereich Editing
+      kümmere ich mich um die Sichtung un den Schnitt von Rohmaterial. Im
+      Bereich Post-Production kümmere ich mich um die Unterstützung bei der
+      Retusche, Compositing und Animationen für TV- / Onlineproduktionen.
+      Außerdem helfe ich bei der Erstellung von professionellen Grafiken und der
+      Entwicklung von kreativen Ideen für den Bereich TV & Web.
+    </p>
+    <p class="absatz">
+      Referenzen dazu finden Sie in meinem Portfolio auf der Startseite.
+    </p>
+
+    <h2 class="partTitle">Kontakt</h2>
+
     <p>
       Sollten Sie weitere Fragen an mich haben, kontaktieren Sie mich gern über
-      meine <a href="mailto:kakaostream@gmail.com">Email-Adresse</a>.
+      meine <a href="mailto:kakaostream@gmail.com" class="highlight"
+        >Email-Adresse</a
+      >.
     </p>
   </div>
 </BaseLayout>
 
 <style>
-  div {
+  .title {
+    text-align: center;
+  }
+
+  .container {
     margin: 2em;
   }
-  .absatz {
-    margin-top: 3em;
+  .partTitle {
+    margin: 3em 0 0.5em 0;
   }
-  a {
+  .absatz {
+    margin-bottom: 1em;
+  }
+  .highlight {
     text-decoration: underline;
     font-weight: bold;
   }
