@@ -12,5 +12,21 @@ import Video from "./Video.astro";
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    height: 525px;
+    overflow-y: scroll;
+    padding: 1.5em 0;
+  }
+
+  .video-list::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .video-list::-webkit-scrollbar-thumb {
+    background: #fff0de;
+    border-radius: 10px;
+  }
+
+  .video-list::-webkit-scrollbar-thumb:hover {
+    background: #ffdfbc;
   }
 </style>

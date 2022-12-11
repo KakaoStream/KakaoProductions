@@ -3,21 +3,24 @@
         "media": "Twitch",
         "name": "KakaoStream",
         "url": "https://www.twitch.tv/kakaostream",
-        "follower": "1",
-        "color": "rgba(103, 58, 183, 0.6)"
+        "follower": 41,
+        "colorTrans": "rgba(103, 58, 183, 0.6)",
+        "color": "rgba(103, 58, 183)"
     },
     {
         "media": "YouTube",
         "name": "KakaoStream",
         "url": "https://www.youtube.com/channel/UCwywTitNgGl4k_7bWWSI_Rw",
-        "follower": "1",
-        "color": "rgba(255, 0, 0, 0.6)"
+        "follower": 132,
+        "colorTrans": "rgba(255, 0, 0, 0.6)",
+        "color": "rgba(255, 0, 0)"
     },
     {
         "media": "TikTok",
         "name": "KakaoStream",
         "url": "https://www.tiktok.com/@kakaostream?lang=de-DE",
-        "follower": "1",
-        "color": "rgba(238, 30, 82, 0.6)"
+        "follower": 895,
+        "colorTrans": "rgba(238, 30, 82, 0.6)",
+        "color": "rgba(238, 30, 82)"
     }
 ]
